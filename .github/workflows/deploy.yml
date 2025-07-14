@@ -21,6 +21,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+
       - name: Remove old app.zip
         run: rm -rf app.zip
 
@@ -63,6 +64,7 @@ jobs:
             EOF
 
             npm ci
+            npm i -g pm2
             pm2 delete all || true
             pm2 start index.js --name express-test
             
