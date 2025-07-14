@@ -63,8 +63,8 @@ jobs:
             AWS_REGION= '${{ secrets.AWS_REGION }}'
             EOF
 
-            npm ci
-            npm i -g pm2
+            sudo npm ci
+            sudo npm i -g pm2
             pm2 delete all || true
             pm2 start index.js --name express-test
             
