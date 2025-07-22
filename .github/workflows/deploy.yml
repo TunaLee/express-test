@@ -49,7 +49,7 @@ jobs:
           script: |
             set -e
             cd ~
-            rm -rf express-test/
+            sudo rm -rf express-test/
             sudo apt install -y unzip
             unzip -o app.zip -d express-test
             cd express-test
