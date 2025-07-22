@@ -46,6 +46,10 @@ app.use((req, res, next)=> {
 
 app.use('/posts', postRouter)
 app.use('/auth', userRouter)
+app.use('/health', (req, res)=> {
+    res.status(200).send('ok')
+})
+
 app.use((err, req, res, next)=> {
     res.status(500).json({message: err.message})
 })
