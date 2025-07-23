@@ -8,7 +8,7 @@ services:
   express-test:
     build: .
     container_name: express-test
-    environment:
+    env_file:
       - .env
     depends_on:
       - mongodb
